@@ -37,6 +37,7 @@ jobs:
         sudo timedatectl set-timezone "$TZ"
         sudo mkdir -p /workdir
         sudo chown $USER:$GROUPS /workdir
+        sudo ln -s /usr/include/aarch64-linux-gnu/asm /usr/include/asm
 
     - name: Clone source code
       working-directory: /workdir
